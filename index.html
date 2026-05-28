@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>负数最大化寻路游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>负数最大化寻路游戏</h1>
+        <p class="description">
+            规则：从<span class="color-box start-box">起点</span>出发，每次只能移动到相邻且未走过的格子上，直到到达<span class="color-box end-box">终点</span>。<br>
+            <strong>点击你想移动到的相邻格子</strong>，然后选择一个运算符号（加、减、乘、除）。<br>
+            目标：到达终点时，获得尽可能大的最终分数！
+        </p>
+        
+        <div class="game-panel">
+            <div class="level-selector">
+                <label for="level-select">选择关卡：</label>
+                <select id="level-select">
+                    <!-- 关卡选项由 JS 动态生成 -->
+                </select>
+            </div>
+            
+            <div class="score-board">
+                当前分数: <span id="score">0</span>
+            </div>
+        </div>
+
+        <div id="game-message" class="message hidden"></div>
+        
+        <div class="grid-container">
+            <div id="grid" class="grid"></div>
+            
+            <!-- 悬浮的运算选择弹窗 -->
+            <div id="operator-popup" class="hidden">
+                <button class="op-btn" data-op="+">+</button>
+                <button class="op-btn" data-op="-">-</button>
+                <button class="op-btn" data-op="*">×</button>
+                <button class="op-btn" data-op="/">÷</button>
+                <button id="cancel-op" class="cancel-btn">取消</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="restart-btn">重新开始本关</button>
+        </div>
+    </div>
+
+    <!-- 引入关卡数据和主逻辑 -->
+    <script src="levels.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
