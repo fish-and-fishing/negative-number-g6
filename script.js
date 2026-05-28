@@ -1,4 +1,4 @@
-const GRID_SIZE = 10;
+const GRID_SIZE = 5;
 let currentLevelIndex = 0;
 let grid = [];
 let startPos = { x: 0, y: 0 };

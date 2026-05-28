@@ -16,9 +16,9 @@ for (let i = 0; i < 20; i++) {
     const rng = mulberry32(i + 1024);
     
     const grid = [];
-    for (let y = 0; y < 10; y++) {
+    for (let y = 0; y < 5; y++) {
         let row = [];
-        for (let x = 0; x < 10; x++) {
+        for (let x = 0; x < 5; x++) {
             let val = 0;
             while (val === 0) {
                 // 生成 -9 到 9 之间的随机数，不包含 0
@@ -31,16 +31,16 @@ for (let i = 0; i < 20; i++) {
 
     // 随机但固定的起点
     let startPos = {
-        x: Math.floor(rng() * 10),
-        y: Math.floor(rng() * 10)
+        x: Math.floor(rng() * 5),
+        y: Math.floor(rng() * 5)
     };
 
     // 随机但固定的终点（确保与起点不同）
     let endPos;
     do {
         endPos = {
-            x: Math.floor(rng() * 10),
-            y: Math.floor(rng() * 10)
+            x: Math.floor(rng() * 5),
+            y: Math.floor(rng() * 5)
         };
     } while (endPos.x === startPos.x && endPos.y === startPos.y);
 

@@ -93,7 +93,7 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 4px;
     background: #bdc3c7;
     padding: 4px;
